@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio - DENNIS MUSIC</title>
+
+    <!-- Configuración PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#222222">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+
+    <!-- CONTENIDO DE INICIO -->
+    <main>
+
+        <h2>¿Qué escucharás hoy?</h2>
+
+        <!-- BUSCADOR -->
+        <form id="searchForm" class="search">
+
+            <input
+                id="searchInput"
+                type="search"
+                placeholder="Buscar canciones o artistas..."
+                aria-label="Buscar canciones o artistas"
+                required
+            >
+
+            <button type="submit" aria-label="Buscar">⌕</button>
+
+        </form>
+
+        <!-- CANCIONES -->
+        <h3 id="sectionTitle">Música recomendada</h3>
+
+        <p id="songStatus" class="section-status" role="status" aria-live="polite">
+            Cargando canciones...
+        </p>
+
+        <section id="songList" class="songs"></section>
+
+        <button id="loadMoreBtn" class="load-more">
+            Cargar más canciones
+        </button>
+
+        <!-- ARTISTAS -->
+        <h3 id="artistsTitle">Artistas populares</h3>
+        <p id="artistStatus" class="section-status" role="status" aria-live="polite">
+            Cargando artistas...
+        </p>
+
+        <section id="artistList" class="artists"></section>
+
+        <button id="loadMoreArtistsBtn" class="load-more">
+            Cargar más artistas
+        </button>
+
+    </main>
+
+</body>
+</html>

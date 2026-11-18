@@ -1,0 +1,124 @@
+.playlists-page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#contenido > main > h2 {
+    margin: 30px 0 8px;
+    font-size: clamp(24px, 4vw, 36px);
+}
+
+#contenido > main > p,
+#playlistStatus,
+#playlistDetailStatus {
+    color: var(--texto-secundario);
+    margin: 10px 0 18px;
+}
+
+.playlist-create-form {
+    max-width: 620px;
+    margin: 24px 0;
+}
+
+.playlist-create-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+.playlist-create-form > div {
+    display: flex;
+    gap: 10px;
+}
+
+.playlist-create-form input,
+#playlistSelect {
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background: #321c1d;
+    color: var(--texto);
+}
+
+.playlist-create-form input {
+    flex: 1;
+}
+
+.playlist-create-form button,
+#backToPlaylistsBtn,
+#deletePlaylistBtn,
+.playlist-card button {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 20px;
+    background: var(--rojo);
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 14px;
+}
+
+.playlist-card {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    background: var(--superficie);
+}
+
+.playlist-card h3 {
+    overflow-wrap: anywhere;
+    margin-bottom: 8px;
+}
+
+.playlist-card p {
+    margin-bottom: 16px;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+.playlist-card-actions,
+.playlist-detail-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.playlist-card .delete-playlist,
+#deletePlaylistBtn {
+    border: 1px solid var(--borde);
+    background: transparent;
+    color: var(--texto);
+}
+
+.playlist-detail-heading {
+    margin: 18px 0;
+}
+
+.playlist-detail-heading h3 {
+    overflow-wrap: anywhere;
+}
+
+#playlistSongs {
+    margin-top: 16px;
+}
+
+#playlistSongs .song {
+    cursor: default;
+}
+
+@media (max-width: 600px) {
+    .playlist-create-form > div,
+    .playlist-detail-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}

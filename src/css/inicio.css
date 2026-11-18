@@ -1,0 +1,460 @@
+
+/* =========================================
+   DENNIS MUSIC - ESTILOS DE INICIO
+   ========================================= */
+
+/* 1. CONTENIDO */
+#contenido {
+    width: 100%;
+    max-width: 1400px;
+    min-width: 0;
+    margin: auto;
+}
+
+#contenido h2 {
+    margin: 30px 0 15px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#contenido h3 {
+    margin: 30px 0 15px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.section-status {
+    color: var(--texto-secundario);
+    font-size: 13px;
+    margin: 12px 0;
+}
+
+/* 2. BUSCADOR */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 650px;
+    min-width: 0;
+}
+
+.search input {
+    flex: 1;
+    min-width: 0;
+    width: 0;
+    min-height: 45px;
+
+    padding: 12px 18px;
+
+    border-radius: 25px;
+    border: 1px solid var(--borde);
+
+    background: #ffffff18;
+    color: var(--texto);
+
+    outline: none;
+    font-size: 13px;
+    transition: .25s;
+}
+
+.search input::placeholder {
+    color: #ccc;
+}
+
+.search input:focus {
+    border-color: var(--rojo);
+    background: #ffffff22;
+    box-shadow: 0 0 0 3px #e7353825;
+}
+
+.search button {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--rojo);
+    color: white;
+
+    font-size: 23px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.search button:hover {
+    background: var(--rojo-hover);
+    transform: scale(1.05);
+}
+
+/* 3. LISTA DE CANCIONES */
+.songs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 75px;
+
+    padding: 10px;
+
+    border: 1px solid #ffffff0d;
+    border-radius: 12px;
+    background: #ffffff12;
+
+    overflow: hidden;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.song:hover {
+    background: #ffffff25;
+    transform: translateY(-3px);
+}
+
+.song img {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+
+    object-fit: cover;
+    border-radius: 9px;
+    background: #292020;
+}
+
+.song-info {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.song-info strong,
+.song-info small {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: anywhere;
+}
+
+.song-info strong {
+    color: white;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.song-info small {
+    color: var(--texto-secundario);
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.song button {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+    color: white;
+
+    font-size: 17px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.song button:hover {
+    background: var(--rojo);
+    transform: scale(1.08);
+}
+
+/* 4. LISTA DE ARTISTAS */
+.artists {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+    padding: 16px 10px;
+
+    border: 1px solid #ffffff0d;
+    border-radius: 14px;
+    background: #ffffff12;
+
+    text-align: center;
+    overflow: hidden;
+    gap: 8px;
+    transition: .25s;
+}
+
+.artist:hover {
+    background: #ffffff25;
+    transform: translateY(-3px);
+}
+
+.artist img {
+    width: 95px;
+    height: 95px;
+
+    border-radius: 50%;
+    object-fit: cover;
+    background: #292020;
+}
+
+.artist strong {
+    max-width: 100%;
+    color: white;
+    font-size: 13px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.artist small {
+    max-width: 100%;
+    color: var(--texto-secundario);
+    font-size: 11px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.artist button {
+    width: 100%;
+    min-height: 34px;
+
+    padding: 8px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: var(--rojo);
+    color: white;
+
+    font-size: 11px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.artist button:hover {
+    background: var(--rojo-hover);
+}
+
+/* 5. BOTONES CARGAR MÁS */
+.load-more {
+    display: block;
+    width: 100%;
+    max-width: 230px;
+
+    margin: 18px auto;
+    padding: 12px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: var(--rojo);
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.load-more:hover {
+    background: var(--rojo-hover);
+    transform: scale(1.02);
+}
+
+.load-more:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* 6. TABLETS */
+@media (max-width: 900px) {
+
+    .songs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .artists {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .artist img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+/* 7. CELULARES */
+@media (max-width: 600px) {
+
+    #contenido h2 {
+        margin-top: 23px;
+        font-size: 21px;
+    }
+
+    #contenido h3 {
+        margin-top: 24px;
+        font-size: 16px;
+    }
+
+    .search input {
+        min-height: 43px;
+        font-size: 12px;
+    }
+
+    .songs {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 9px;
+    }
+
+    .song {
+        min-height: 65px;
+    }
+
+    .song img {
+        width: 47px;
+        height: 47px;
+    }
+
+    .song-info strong {
+        font-size: 12px;
+    }
+
+    .artists {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .artist {
+        padding: 12px 8px;
+    }
+
+    .artist img {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+/* 8. CELULARES PEQUEÑOS */
+@media (max-width: 380px) {
+
+    #contenido h2 {
+        font-size: 19px;
+    }
+
+    .song {
+        gap: 7px;
+        padding: 7px;
+    }
+
+    .song img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .song button {
+        width: 27px;
+        height: 27px;
+        font-size: 14px;
+    }
+
+    .artist img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* 9. ESCRITORIO */
+@media (min-width: 901px) {
+
+    #contenido h2 {
+        font-size: 30px;
+        margin-top: 35px;
+    }
+
+    #contenido h3 {
+        font-size: 20px;
+    }
+
+    .songs {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .song {
+        min-height: 85px;
+        padding: 12px;
+    }
+
+    .song img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .song-info strong {
+        font-size: 14px;
+    }
+
+    .song-info small {
+        font-size: 12px;
+    }
+
+    .artists {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .artist {
+        padding: 20px 12px;
+    }
+
+    .artist img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .artist strong {
+        font-size: 14px;
+    }
+}

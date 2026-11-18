@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>D MUSIC</title>
+
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="src/css/reproductor.css">
+
+    <!-- Color de la aplicación -->
+    <meta name="theme-color" content="#321c1d">
+
+    <!-- Configuración PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Music">
+    <link rel="apple-touch-icon" href="src/img/logo.svg">
+</head>
+
+<body>
+
+    <p id="authStatus" class="auth-status" role="status" aria-live="polite">
+        Verificando la sesión...
+    </p>
+
+    <div class="app" hidden>
+
+        <!-- ENCABEZADO -->
+        <header>
+            <h2>D MUSIC</h2>
+            <div class="header-actions">
+                <button id="logoutBtn" type="button">Cerrar sesión</button>
+            </div>
+        </header>
+
+        <!-- CONTENIDO DINÁMICO -->
+        <main id="contenido">
+            <h2>¿Qué escucharás hoy?</h2>
+            <p>Cargando aplicación...</p>
+        </main>
+
+        <!-- REPRODUCTOR ÚNICO -->
+        <footer class="player" id="player">
+
+            <div class="current-song">
+
+                <img id="cover" src="src/img/logo.svg" alt="Portada">
+
+                <div class="song-info">
+                    <strong id="songTitle">Selecciona una canción</strong>
+                    <small id="artist">Artista</small>
+                    <small id="playerStatus" class="player-status" role="status" aria-live="polite"></small>
+                </div>
+
+            </div>
+
+            <div class="controls">
+                <button id="prevBtn" type="button" aria-label="Canción anterior">|◀</button>
+                <button id="playBtn" type="button" aria-label="Reproducir o pausar">▶</button>
+                <button id="nextBtn" type="button" aria-label="Siguiente canción">▶|</button>
+            </div>
+
+            <div class="progress">
+                <span id="currentTime">0:00</span>
+
+                <input
+                    type="range"
+                    id="progress"
+                    aria-label="Progreso de la canción"
+                    value="0"
+                    min="0"
+                    max="100"
+                >
+
+                <span id="duration">0:00</span>
+            </div>
+
+            <!-- ÚNICO AUDIO DE TODA LA APLICACIÓN -->
+            <audio id="audio"></audio>
+
+        </footer>
+
+        <!-- NAVEGACIÓN -->
+        <nav class="navbar">
+            <button type="button" data-page="inicio" aria-label="Inicio" title="Inicio">⌂</button>
+            <button type="button" data-page="buscar" aria-label="Buscar" title="Buscar">⌕</button>
+            <button type="button" data-page="listas" aria-label="Mis listas" title="Mis listas">≡</button>
+            <button type="button" data-page="favoritos" aria-label="Favoritos" title="Favoritos">♥</button>
+        </nav>
+
+        <dialog id="playlistDialog" class="playlist-dialog">
+            <form id="addToPlaylistForm">
+                <h2>Agregar a una lista</h2>
+                <p id="playlistDialogMessage" role="status" aria-live="polite"></p>
+                <label for="playlistSelect">Elige una lista</label>
+                <select id="playlistSelect"></select>
+                <div class="playlist-dialog-actions">
+                    <button type="submit">Agregar</button>
+                    <button id="goToPlaylistsBtn" type="button" hidden>Crear lista</button>
+                    <button id="cancelPlaylistDialogBtn" type="button">Cancelar</button>
+                </div>
+            </form>
+        </dialog>
+
+    </div>
+
+    <script src="src/js/itunes-api.js"></script>
+    <script src="src/js/listas-reproduccion.js"></script>
+
+    <!-- CONTROLADOR PRINCIPAL -->
+    <script type="module" src="src/js/auth-guard.js"></script>
+
+    <!-- REGISTRO DE LA APLICACIÓN PWA -->
+    <script src="src/js/pwa.js"></script>
+
+</body>
+</html>

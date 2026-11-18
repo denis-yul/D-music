@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis listas - D MUSIC</title>
+</head>
+<body>
+    <main>
+        <div class="playlists-page">
+        <h2>Mis listas</h2>
+        <p>Organiza las canciones disponibles en Audius.</p>
+
+        <form id="createPlaylistForm" class="playlist-create-form">
+            <label for="playlistName">Nombre de la nueva lista</label>
+            <div>
+                <input
+                    id="playlistName"
+                    type="text"
+                    maxlength="50"
+                    placeholder="Por ejemplo: Para entrenar"
+                    required
+                >
+                <button type="submit">Crear lista</button>
+            </div>
+        </form>
+
+        <p id="playlistStatus" role="status" aria-live="polite"></p>
+
+        <section id="playlistList" class="playlist-grid"></section>
+
+        <section id="playlistDetail" hidden>
+            <button id="backToPlaylistsBtn" type="button">← Todas las listas</button>
+            <div class="playlist-detail-heading">
+                <h3 id="playlistDetailTitle"></h3>
+                <button id="deletePlaylistBtn" type="button">Eliminar lista</button>
+            </div>
+            <p id="playlistDetailStatus" role="status" aria-live="polite"></p>
+            <section id="playlistSongs" class="songs"></section>
+        </section>
+        </div>
+    </main>
+</body>
+</html>

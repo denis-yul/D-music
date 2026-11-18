@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buscar - DENNIS MUSIC</title>
+
+    <!-- Configuración PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#321c1d">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+
+    <!-- CONTENIDO DE BÚSQUEDA -->
+    <main>
+
+        <h2>Busca música y artistas</h2>
+
+        <!-- FORMULARIO DE BÚSQUEDA -->
+        <form id="searchForm">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Buscar..."
+                aria-label="Buscar canciones"
+                required
+            >
+
+            <button type="submit" aria-label="Buscar">
+                ⌕
+            </button>
+
+        </form>
+
+        <!-- RESULTADOS AUDIOUS -->
+        <h3>Canciones</h3>
+        <p id="status" role="status" aria-live="polite">
+            Busca canciones y artistas 
+        </p>
+        <!-- RESULTADOS -->
+        <section id="songList" class="songs"></section>
+
+        <!-- RESULTADOS DE ITUNES -->
+        <h3>Catálogo</h3>
+        <p id="itunesStatus" role="status" aria-live="polite"></p>
+        <section id="itunesSongList" class="songs"></section>
+
+        <h3>Artistas</h3>
+        <p id="itunesArtistStatus" role="status" aria-live="polite"></p>
+        <section id="itunesArtistList" class="artists"></section>
+
+    </main>
+
+</body>
+</html>

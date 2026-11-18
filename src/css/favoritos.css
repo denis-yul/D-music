@@ -1,0 +1,215 @@
+
+/* =========================================
+   DENNIS MUSIC - ESTILOS DE FAVORITOS
+   ========================================= */
+
+/* 1. CONTENIDO PRINCIPAL */
+#contenido {
+    width: 100%;
+    max-width: 1400px;
+    min-width: 0;
+    margin: auto;
+}
+
+#contenido h2 {
+    margin: 30px 0 18px;
+}
+
+/* 2. ESTADO */
+#status {
+    color: #ddd;
+    font-size: 13px;
+    margin: 12px 0 18px;
+}
+
+/* 3. LISTA DE FAVORITOS */
+#songList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+/* 4. TARJETAS */
+.song {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 75px;
+
+    padding: 10px;
+
+    border: 1px solid #ffffff0d;
+    border-radius: 12px;
+
+    background: #ffffff12;
+
+    overflow: hidden;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.song:hover {
+    background: #ffffff25;
+    transform: translateY(-2px);
+}
+
+/* 5. PORTADAS */
+.song img {
+    flex-shrink: 0;
+
+    width: 55px;
+    height: 55px;
+
+    object-fit: cover;
+    border-radius: 9px;
+
+    background: #292020;
+}
+
+/* 6. INFORMACIÓN */
+.song-info {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.song strong,
+.song small {
+    display: block;
+    max-width: 100%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.song strong {
+    color: white;
+    font-size: 13px;
+}
+
+.song small {
+    color: var(--texto-secundario);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+/* 7. BOTONES */
+.song button {
+    flex-shrink: 0;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+    color: white;
+
+    font-size: 18px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.song button:hover {
+    background: var(--rojo);
+}
+
+/* 8. TABLETS */
+@media (max-width: 900px) {
+
+    #songList {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 9. CELULARES */
+@media (max-width: 600px) {
+
+    #contenido h2 {
+        margin-top: 24px;
+        font-size: 21px;
+    }
+
+    #songList {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 9px;
+    }
+
+    .song {
+        min-height: 65px;
+        padding: 8px;
+        gap: 9px;
+    }
+
+    .song img {
+        width: 47px;
+        height: 47px;
+    }
+
+    .song strong {
+        font-size: 12px;
+    }
+
+    .song small {
+        font-size: 10px;
+    }
+}
+
+/* 10. CELULARES PEQUEÑOS */
+@media (max-width: 380px) {
+
+    .song {
+        gap: 7px;
+        padding: 7px;
+    }
+
+    .song img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .song button {
+        width: 29px;
+        height: 29px;
+        font-size: 15px;
+    }
+}
+
+/* 11. ESCRITORIO */
+@media (min-width: 901px) {
+
+    #songList {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .song {
+        min-height: 85px;
+        padding: 12px;
+    }
+
+    .song img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .song strong {
+        font-size: 14px;
+    }
+
+    .song small {
+        font-size: 12px;
+    }
+}
