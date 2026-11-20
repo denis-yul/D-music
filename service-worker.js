@@ -1,5 +1,5 @@
 // Nombre y versión de la caché
-const CACHE_NAME = "music-app-v8";
+const CACHE_NAME = "music-app-v9";
 
 // Archivos principales de la aplicación
 const ARCHIVOS = [
@@ -32,8 +32,6 @@ const ARCHIVOS = [
     "./src/js/pwa.js",
 
     "./src/img/logo.svg",
-    "./src/img/icon-192.png",
-    "./src/img/icon-512.png",
     "./src/img/screenshot-desktop.png",
     "./src/img/screenshot-mobile.png",
     "./src/icons/Heart.svg",

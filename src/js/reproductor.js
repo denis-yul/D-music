@@ -52,6 +52,24 @@ if (
     );
 }
 
+const playIcon = playBtn.querySelector(".app-icon");
+if (!playIcon) {
+    throw new Error("Falta el icono del botón de reproducción en index.html.");
+}
+
+function actualizarIconoReproduccion() {
+    const reproduciendo = !audio.paused && !audio.ended;
+    playIcon.src = reproduciendo
+        ? "src/icons/Pause.svg"
+        : "src/icons/Play.svg";
+    playBtn.setAttribute(
+        "aria-label",
+        reproduciendo ? "Pausar canción" : "Reproducir canción"
+    );
+}
+
+actualizarIconoReproduccion();
+
 
 /* =========================================
    3. VARIABLES DEL REPRODUCTOR
@@ -65,10 +83,10 @@ audio.preload = "metadata";
 window.cargarImagenConFallback = function (imagen, src) {
     imagen.onerror = () => {
         imagen.onerror = null;
-        imagen.src = "src/img/icon-192.png";
+        imagen.src = "src/img/logo.svg";
     };
 
-    imagen.src = src || "src/img/icon-192.png";
+    imagen.src = src || "src/img/logo.svg";
 };
 
 
@@ -257,15 +275,16 @@ prevBtn.addEventListener("click", () => {
    ========================================= */
 
 audio.addEventListener("play", () => {
-    playBtn.innerHTML = '<img class="app-icon" src="src/icons/Pause.svg" alt="" aria-hidden="true">';
+    actualizarIconoReproduccion();
     playerStatus.textContent = "";
 });
 
 audio.addEventListener("pause", () => {
-    playBtn.innerHTML = '<img class="app-icon" src="src/icons/Play.svg" alt="" aria-hidden="true">';
+    actualizarIconoReproduccion();
 });
 
 audio.addEventListener("ended", () => {
+    actualizarIconoReproduccion();
     Reproductor.siguiente();
 });
 

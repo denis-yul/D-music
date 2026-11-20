@@ -241,6 +241,14 @@ header h2 {
     transform: scale(1.1);
 }
 
+.controls .app-icon {
+    filter: brightness(0) invert(1);
+}
+
+#nextBtn .app-icon {
+    transform: scaleX(-1);
+}
+
 #playBtn {
     width: 40px;
     height: 40px;
