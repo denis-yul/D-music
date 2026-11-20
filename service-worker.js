@@ -1,5 +1,5 @@
 // Nombre y versión de la caché
-const CACHE_NAME = "music-app-v7";
+const CACHE_NAME = "music-app-v8";
 
 // Archivos principales de la aplicación
 const ARCHIVOS = [
@@ -35,7 +35,15 @@ const ARCHIVOS = [
     "./src/img/icon-192.png",
     "./src/img/icon-512.png",
     "./src/img/screenshot-desktop.png",
-    "./src/img/screenshot-mobile.png"
+    "./src/img/screenshot-mobile.png",
+    "./src/icons/Heart.svg",
+    "./src/icons/Home.svg",
+    "./src/icons/Menu.svg",
+    "./src/icons/Pause.svg",
+    "./src/icons/Play.svg",
+    "./src/icons/Plus Math.svg",
+    "./src/icons/search.svg",
+    "./src/icons/Skip Backward.svg"
 ];
 
 // Instalar y guardar archivos

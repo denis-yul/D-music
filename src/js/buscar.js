@@ -105,7 +105,7 @@ window.inicializarBuscar = function () {
             try {
                 favorites.push(song);
                 localStorage.setItem(claveFavoritos, JSON.stringify(favorites));
-                estadoAudius.textContent = "¡Canción agregada a favoritos! ♥";
+                estadoAudius.innerHTML = '¡Canción agregada a favoritos! <img class="app-icon inline-icon" src="src/icons/Heart.svg" alt="" aria-hidden="true">';
             } catch (error) {
                 console.error("Error al guardar favorito:", error);
                 estadoAudius.textContent = "No se pudo guardar la canción.";
@@ -114,7 +114,7 @@ window.inicializarBuscar = function () {
 
         const playlistButton = document.createElement("button");
         playlistButton.type = "button";
-        playlistButton.textContent = "＋";
+        playlistButton.innerHTML = '<img class="app-icon" src="src/icons/Plus Math.svg" alt="" aria-hidden="true">';
         playlistButton.setAttribute(
             "aria-label",
             `Agregar ${song.title || "canción"} a una lista`

@@ -257,7 +257,7 @@ prevBtn.addEventListener("click", () => {
    ========================================= */
 
 audio.addEventListener("play", () => {
-    playBtn.innerHTML = '<img class="app-icon" src="src/icons/Play.svg" alt="" aria-hidden="true">';
+    playBtn.innerHTML = '<img class="app-icon" src="src/icons/Pause.svg" alt="" aria-hidden="true">';
     playerStatus.textContent = "";
 });
 

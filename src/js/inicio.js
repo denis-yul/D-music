@@ -240,7 +240,7 @@ window.inicializarInicio = function () {
 
         const playlistButton = document.createElement("button");
         playlistButton.type = "button";
-        playlistButton.textContent = "＋";
+        playlistButton.innerHTML = '<img class="app-icon" src="src/icons/Plus Math.svg" alt="" aria-hidden="true">';
         playlistButton.setAttribute(
             "aria-label",
             "Agregar " + (song.title || "canción") + " a una lista"
@@ -500,8 +500,8 @@ window.inicializarInicio = function () {
                 JSON.stringify(favoritos)
             );
 
-            songStatusText.textContent =
-                "¡Canción agregada a favoritos! ♥";
+            songStatusText.innerHTML =
+                '¡Canción agregada a favoritos! <img class="app-icon inline-icon" src="src/icons/Heart.svg" alt="" aria-hidden="true">';
         } catch (error) {
             console.error("Error al guardar favorito:", error);
             songStatusText.textContent =

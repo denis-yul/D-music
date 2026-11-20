@@ -106,8 +106,8 @@ window.inicializarFavoritos = function () {
         // Comprobar si existen canciones
         if (!favoritos.length) {
 
-            statusText.textContent =
-                "Todavía no tienes canciones favoritas. ♥";
+            statusText.innerHTML =
+                'Todavía no tienes canciones favoritas. <img class="app-icon inline-icon" src="src/icons/Heart.svg" alt="" aria-hidden="true">';
 
             return;
         }
@@ -191,7 +191,7 @@ window.inicializarFavoritos = function () {
 
             const playlistButton = document.createElement("button");
             playlistButton.type = "button";
-            playlistButton.textContent = "＋";
+            playlistButton.innerHTML = '<img class="app-icon" src="src/icons/Plus Math.svg" alt="" aria-hidden="true">';
             playlistButton.title = "Agregar a una lista";
             playlistButton.setAttribute(
                 "aria-label",
