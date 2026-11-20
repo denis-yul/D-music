@@ -60,7 +60,7 @@
 }
 
 /* 5. PORTADAS */
-.song img {
+.song > img {
     flex-shrink: 0;
 
     width: 55px;
@@ -153,7 +153,7 @@
         gap: 9px;
     }
 
-    .song img {
+    .song > img {
         width: 47px;
         height: 47px;
     }
@@ -175,7 +175,7 @@
         padding: 7px;
     }
 
-    .song img {
+    .song > img {
         width: 40px;
         height: 40px;
     }
@@ -200,7 +200,7 @@
         padding: 12px;
     }
 
-    .song img {
+    .song > img {
         width: 60px;
         height: 60px;
     }

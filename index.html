@@ -59,7 +59,9 @@
 
             <div class="controls">
                 <button id="prevBtn" type="button" aria-label="Canción anterior">|◀</button>
-                <button id="playBtn" type="button" aria-label="Reproducir o pausar">▶</button>
+                <button id="playBtn" type="button" aria-label="Reproducir o pausar">
+                    <img class="app-icon" src="src/icons/Play.svg" alt="" aria-hidden="true">
+                </button>
                 <button id="nextBtn" type="button" aria-label="Siguiente canción">▶|</button>
             </div>
 
@@ -85,10 +87,16 @@
 
         <!-- NAVEGACIÓN -->
         <nav class="navbar">
-            <button type="button" data-page="inicio" aria-label="Inicio" title="Inicio">⌂</button>
-            <button type="button" data-page="buscar" aria-label="Buscar" title="Buscar">⌕</button>
+            <button type="button" data-page="inicio" aria-label="Inicio" title="Inicio">
+                <img class="app-icon" src="src/icons/Home.svg" alt="" aria-hidden="true">
+            </button>
+            <button type="button" data-page="buscar" aria-label="Buscar" title="Buscar">
+                <img class="app-icon" src="src/icons/search.svg" alt="" aria-hidden="true">
+            </button>
             <button type="button" data-page="listas" aria-label="Mis listas" title="Mis listas">≡</button>
-            <button type="button" data-page="favoritos" aria-label="Favoritos" title="Favoritos">♥</button>
+            <button type="button" data-page="favoritos" aria-label="Favoritos" title="Favoritos">
+                <img class="app-icon" src="src/icons/Heart.svg" alt="" aria-hidden="true">
+            </button>
         </nav>
 
         <dialog id="playlistDialog" class="playlist-dialog">

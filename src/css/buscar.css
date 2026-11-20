@@ -119,7 +119,7 @@
     transform: translateY(-2px);
 }
 
-.song img {
+.song > img {
     grid-column: 1;
     grid-row: 1 / 3;
 
@@ -264,7 +264,7 @@
         padding: 10px;
     }
 
-    .song img {
+    .song > img {
         width: 52px;
         height: 52px;
     }

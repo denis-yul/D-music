@@ -208,7 +208,7 @@ window.inicializarInicio = function () {
         const playButton = document.createElement("button");
 
         playButton.type = "button";
-        playButton.textContent = "▶";
+        playButton.innerHTML = '<img class="app-icon" src="src/icons/Play.svg" alt="" aria-hidden="true">';
         playButton.setAttribute(
             "aria-label",
             "Reproducir " + (song.title || "canción")
@@ -225,7 +225,7 @@ window.inicializarInicio = function () {
         const favoriteButton = document.createElement("button");
 
         favoriteButton.type = "button";
-        favoriteButton.textContent = "♥";
+        favoriteButton.innerHTML = '<img class="app-icon" src="src/icons/Heart.svg" alt="" aria-hidden="true">';
         favoriteButton.setAttribute(
             "aria-label",
             "Agregar " + (song.title || "canción") + " a favoritos"

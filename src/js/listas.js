@@ -114,7 +114,7 @@ window.inicializarListas = function () {
 
             const playButton = document.createElement("button");
             playButton.type = "button";
-            playButton.textContent = "▶";
+            playButton.innerHTML = '<img class="app-icon" src="src/icons/Play.svg" alt="" aria-hidden="true">';
             playButton.setAttribute(
                 "aria-label",
                 `Reproducir ${cancion.title || "canción"}`

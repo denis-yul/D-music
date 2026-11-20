@@ -257,12 +257,12 @@ prevBtn.addEventListener("click", () => {
    ========================================= */
 
 audio.addEventListener("play", () => {
-    playBtn.textContent = "Ⅱ";
+    playBtn.innerHTML = '<img class="app-icon" src="src/icons/Play.svg" alt="" aria-hidden="true">';
     playerStatus.textContent = "";
 });
 
 audio.addEventListener("pause", () => {
-    playBtn.textContent = "▶";
+    playBtn.innerHTML = '<img class="app-icon" src="src/icons/Play.svg" alt="" aria-hidden="true">';
 });
 
 audio.addEventListener("ended", () => {

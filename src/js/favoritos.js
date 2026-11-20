@@ -168,7 +168,7 @@ window.inicializarFavoritos = function () {
 
             playButton.type = "button";
 
-            playButton.textContent = "▶";
+            playButton.innerHTML = '<img class="app-icon" src="src/icons/Play.svg" alt="" aria-hidden="true">';
 
             playButton.title = "Reproducir canción";
 
