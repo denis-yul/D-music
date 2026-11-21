@@ -340,6 +340,14 @@
 /* 7. CELULARES */
 @media (max-width: 600px) {
 
+    #contenido,
+    .search,
+    .songs,
+    .artists {
+        width: 100%;
+        max-width: 100%;
+    }
+
     #contenido h2 {
         margin-top: 23px;
         font-size: 21px;
