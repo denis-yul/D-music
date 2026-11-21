@@ -1,5 +1,5 @@
 // Nombre y versión de la caché
-const CACHE_NAME = "music-app-v9";
+const CACHE_NAME = "music-app-v10";
 
 // Archivos principales de la aplicación
 const ARCHIVOS = [
@@ -32,6 +32,8 @@ const ARCHIVOS = [
     "./src/js/pwa.js",
 
     "./src/img/logo.svg",
+    "./src/img/icon-192.png",
+    "./src/img/icon-512.png",
     "./src/img/screenshot-desktop.png",
     "./src/img/screenshot-mobile.png",
     "./src/icons/Heart.svg",
@@ -99,8 +101,13 @@ self.addEventListener("fetch", event => {
         networkResponse.catch(async error => {
             const cache = await caches.open(CACHE_NAME);
             const cachedResponse = await cache.match(event.request);
-
             if (cachedResponse) return cachedResponse;
+
+            if (event.request.mode === "navigate") {
+                const appFallback = await cache.match("./index.html");
+                if (appFallback) return appFallback;
+            }
+
             throw error;
         })
     );

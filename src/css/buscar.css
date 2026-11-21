@@ -262,7 +262,8 @@
 @media (max-width: 600px) {
 
     #contenido h2 {
-        font-size: 19px;
+        margin-top: 18px;
+        font-size: 23px;
     }
 
     #songList,
@@ -272,13 +273,22 @@
     }
 
     .song {
-        grid-template-columns: 52px minmax(0, 1fr);
-        padding: 10px;
+        grid-template-columns: 56px minmax(0, 1fr);
+        padding: 12px;
+        gap: 8px 10px;
     }
 
     .song > img {
-        width: 52px;
-        height: 52px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .song strong {
+        font-size: 15px;
+    }
+
+    .song small {
+        font-size: 12px;
     }
 
     #searchInput {

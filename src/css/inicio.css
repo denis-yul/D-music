@@ -349,18 +349,23 @@
     }
 
     #contenido h2 {
-        margin-top: 23px;
-        font-size: 21px;
+        margin: 18px 0 12px;
+        font-size: 23px;
     }
 
     #contenido h3 {
         margin-top: 24px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .search input {
-        min-height: 43px;
+        min-height: 48px;
         font-size: 16px;
+    }
+
+    .search button {
+        width: 48px;
+        height: 48px;
     }
 
     .songs {
@@ -369,15 +374,22 @@
     }
 
     .song {
-        min-height: 65px;
+        min-height: 76px;
+        gap: 11px;
+        padding: 10px;
     }
 
     .song > img {
-        width: 47px;
-        height: 47px;
+        width: 56px;
+        height: 56px;
     }
 
     .song-info strong {
+        font-size: 15px;
+        line-height: 1.25;
+    }
+
+    .song-info small {
         font-size: 12px;
     }
 
@@ -387,12 +399,29 @@
     }
 
     .artist {
-        padding: 12px 8px;
+        min-height: 150px;
+        justify-content: center;
+        padding: 14px 8px;
     }
 
     .artist img {
-        width: 65px;
-        height: 65px;
+        width: clamp(68px, 22vw, 82px);
+        height: clamp(68px, 22vw, 82px);
+    }
+
+    .artist strong {
+        font-size: 14px;
+    }
+
+    .artist button {
+        min-height: 38px;
+        font-size: 12px;
+    }
+
+    .load-more {
+        max-width: 260px;
+        min-height: 46px;
+        font-size: 14px;
     }
 }
 
@@ -400,28 +429,28 @@
 @media (max-width: 380px) {
 
     #contenido h2 {
-        font-size: 19px;
+        font-size: 21px;
     }
 
     .song {
-        gap: 7px;
-        padding: 7px;
+        gap: 9px;
+        padding: 9px;
     }
 
     .song > img {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
 
     .song button {
-        width: 27px;
-        height: 27px;
-        font-size: 14px;
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
     }
 
     .artist img {
-        width: 55px;
-        height: 55px;
+        width: 64px;
+        height: 64px;
     }
 }
 

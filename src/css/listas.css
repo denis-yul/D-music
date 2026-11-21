@@ -116,6 +116,19 @@
 }
 
 @media (max-width: 600px) {
+    .playlists-page {
+        width: 100%;
+    }
+
+    .playlist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .playlist-card {
+        padding: 14px 10px;
+    }
+
     .playlist-create-form > div,
     .playlist-detail-heading {
         align-items: stretch;
